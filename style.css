@@ -1,0 +1,68 @@
+/* Yleisellä tasolla */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+nav a:hover {
+    background: #555;
+}
+section {
+    padding: 2rem;
+    text-align: center;
+}
+#home {
+    background: #f4f4f4;
+}
+#about {
+    background: #ddd;
+}
+#services {
+    background: #bbb;
+}
+#contact {
+    background: #999;
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    nav a {
+        flex: 1 0 calc(50% - 1rem); /* 2 linkkiä per rivi */
+        text-align: center;
+    }
+    section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
