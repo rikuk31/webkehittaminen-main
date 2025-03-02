@@ -15,7 +15,7 @@
         .form-group {
             margin: 10px 0;
         }
-        input[type="text"] {
+        input[type="text"], input[type="number"] {
             padding: 8px;
             width: 300px;
         }
@@ -54,8 +54,9 @@
     <!-- Add User Form -->
     <div class="form-group">
         <h3>Add User</h3>
-        <input type="text" id="name" placeholder="Name">
-        <input type="text" id="email" placeholder="Email">
+        <input type="text" id="firstName" placeholder="First Name">
+        <input type="text" id="lastName" placeholder="Last Name">
+        <input type="number" id="age" placeholder="Age">
         <button onclick="addUser()">Add User</button>
     </div>
 
@@ -66,8 +67,9 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
                 <th>Delete</th>
             </tr>
         </thead>
@@ -78,66 +80,93 @@
 
     <script>
         // Function to add a new user to the database
-        function addUser() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
+function addUser() {
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const age = document.getElementById('age').value;
 
-            if (!name || !email) {
-                alert('Both name and email are required!');
-                return;
+    if (!firstName || !lastName || !age) {
+        alert('All fields (First Name, Last Name, and Age) are required!');
+        return;
+    }
+
+    fetch('http://localhost:3000/addUser', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ firstName: firstName, lastName: lastName, age: age })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error: ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        alert(data.message);
+        fetchUsers(); // Refresh the user list
+    })
+    .catch(error => {
+        alert('Error: ' + error.message);
+        console.error('Error:', error);
+    });
+}
+
+// Function to fetch users from the database
+function fetchUsers() {
+    fetch('http://localhost:3000/getUsers')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error: ' + response.statusText);
             }
+            return response.json();
+        })
+        .then(data => {
+            const usersTableBody = document.getElementById('usersTable').getElementsByTagName('tbody')[0];
+            usersTableBody.innerHTML = ''; // Clear the current table data
 
-            fetch('http://localhost:3000/addUser', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name: name, email: email })
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert(data.message);
-                fetchUsers(); // Refresh the user list
-            })
-            .catch(error => console.error('Error:', error));
-        }
+            data.forEach(user => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${user.id}</td>
+                    <td>${user.firstName}</td>
+                    <td>${user.lastName}</td>
+                    <td>${user.age}</td>
+                    <td><button class="delete-btn" onclick="deleteUser(${user.id})">Delete</button></td>
+                `;
+                usersTableBody.appendChild(row);
+            });
+        })
+        .catch(error => {
+            alert('Error: ' + error.message);
+            console.error('Error:', error);
+        });
+}
 
-        // Function to fetch users from the database
-        function fetchUsers() {
-            fetch('http://localhost:3000/getUsers')
-                .then(response => response.json())
-                .then(data => {
-                    const usersTableBody = document.getElementById('usersTable').getElementsByTagName('tbody')[0];
-                    usersTableBody.innerHTML = ''; // Clear the current table data
-
-                    data.forEach(user => {
-                        const row = document.createElement('tr');
-                        row.innerHTML = `
-                            <td>${user.id}</td>
-                            <td>${user.name}</td>
-                            <td>${user.email}</td>
-                            <td><button class="delete-btn" onclick="deleteUser(${user.id})">Delete</button></td>
-                        `;
-                        usersTableBody.appendChild(row);
-                    });
-                })
-                .catch(error => console.error('Error:', error));
-        }
-
-        // Function to delete a user from the database
-        function deleteUser(userId) {
-            if (confirm('Are you sure you want to delete this user?')) {
-                fetch(`http://localhost:3000/deleteUser/${userId}`, {
-                    method: 'DELETE',
-                })
-                .then(response => response.json())
-                .then(data => {
-                    alert(data.message);
-                    fetchUsers(); // Refresh the user list
-                })
-                .catch(error => console.error('Error:', error));
+// Function to delete a user from the database
+function deleteUser(userId) {
+    if (confirm('Are you sure you want to delete this user?')) {
+        fetch(`http://localhost:3000/deleteUser/${userId}`, {
+            method: 'DELETE',
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error: ' + response.statusText);
             }
-        }
+            return response.json();
+        })
+        .then(data => {
+            alert(data.message);
+            fetchUsers(); // Refresh the user list
+        })
+        .catch(error => {
+            alert('Error: ' + error.message);
+            console.error('Error:', error);
+        });
+    }
+}
+
     </script>
 
 </body>
