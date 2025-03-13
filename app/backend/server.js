@@ -2,12 +2,16 @@ const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser');
 
+
+
 // Initialize Express
 const app = express();
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 app.use(express.static('public'));
+const cors = require("cors");
+app.use(cors()); // Allows all origins by default, you can restrict it if needed.
 
 // Connect to the SQLite database
 const db = new sqlite3.Database('mydatabase.db', (err) => {
@@ -40,7 +44,14 @@ app.post('/addUser', (req, res) => {
             console.error('Error inserting data:', err.message);
             return res.status(500).json({ error: 'Internal server error' });
         }
-        res.status(201).json({ message: `User added with ID: ${this.lastID}` });
+
+        // Return the newly created user data along with the ID
+        res.status(201).json({
+            id: this.lastID,        // Return the ID assigned to the new user
+            firstName,              // Include firstName
+            lastName,               // Include lastName
+            age                     // Include age
+        });
     });
 });
 
