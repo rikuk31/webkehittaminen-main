@@ -31,7 +31,6 @@ export default function UpdateUser({ onUserUpdated, buttonClass = "btn btn-warni
 
     return (
         <div className="form-group">
-            <h3>Update User</h3>
             <input
                 type="text"
                 placeholder="User ID"

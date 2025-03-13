@@ -29,7 +29,6 @@ export default function CreateUser({ onUserAdded, buttonClass = "btn btn-primary
 
   return (
     <div className="form-group">
-      <h3>Add User</h3>
       <input
         type="text"
         placeholder="First Name"

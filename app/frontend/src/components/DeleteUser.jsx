@@ -20,7 +20,6 @@ export default function DeleteUser() {
 
   return (
     <div className="form-group">
-      <h3>Delete User</h3>
       <input
         type="text"
         placeholder="User ID"
