@@ -19,15 +19,18 @@ export default function DeleteUser() {
   };
 
   return (
-    <div className="form-group">
-      <input
-        type="text"
-        placeholder="User ID"
-        value={id}
-        onChange={(e) => setId(e.target.value)}
-        required
-      />
-      <button type="submit" className="btn btn-danger" onClick={handleDelete}>Delete</button>
+    <div>
+      <h2>Delete User</h2>
+      <form onSubmit={handleDelete}>
+        <input
+          type="text"
+          placeholder="User ID"
+          value={id}
+          onChange={(e) => setId(e.target.value)}
+          required
+        />
+        <button type="submit">Delete</button>
+      </form>
       {message && <p>{message}</p>}
     </div>
   );

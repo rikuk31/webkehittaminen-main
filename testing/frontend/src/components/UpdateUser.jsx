@@ -33,28 +33,28 @@ export default function UpdateUser({ onUserUpdated, buttonClass = "btn btn-warni
         <div className="form-group">
             <input
                 type="text"
-                placeholder="User ID"
+                placeholder="Current User ID"
                 value={id}
                 onChange={(e) => setId(e.target.value)}
                 required
             />
             <input
                 type="text"
-                placeholder="First Name"
+                placeholder="New First Name"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
                 required
             />
             <input
                 type="text"
-                placeholder="Last Name"
+                placeholder="New Last Name"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
                 required
             />
             <input
                 type="number"
-                placeholder="Age"
+                placeholder="New Age"
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
                 required
@@ -64,3 +64,4 @@ export default function UpdateUser({ onUserUpdated, buttonClass = "btn btn-warni
         </div>
     );
 }
+

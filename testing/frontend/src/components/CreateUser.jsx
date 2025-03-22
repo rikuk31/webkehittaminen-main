@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import React from "react";
 
 export default function CreateUser({ onUserAdded, buttonClass = "btn btn-primary" }) {
   const [firstName, setFirstName] = useState("");
@@ -28,30 +29,30 @@ export default function CreateUser({ onUserAdded, buttonClass = "btn btn-primary
   };
 
   return (
-    <div className="form-group">
-      <input
-        type="text"
-        placeholder="First Name"
-        value={firstName}
-        onChange={(e) => setFirstName(e.target.value)}
-        required
-      />
-      <input
-        type="text"
-        placeholder="Last Name"
-        value={lastName}
-        onChange={(e) => setLastName(e.target.value)}
-        required
-      />
-      <input
-        type="number"
-        placeholder="Age"
-        value={age}
-        onChange={(e) => setAge(e.target.value)}
-        required
-      />
-      <button type="submit" className={buttonClass} onClick={handleSubmit}>Create</button>
-      {message && <p>{message}</p>}
-    </div>
+<form onSubmit={handleSubmit} className="form-group">
+  <input
+    type="text"
+    placeholder="First Name"
+    value={firstName}
+    onChange={(e) => setFirstName(e.target.value)}
+    required
+  />
+  <input
+    type="text"
+    placeholder="Last Name"
+    value={lastName}
+    onChange={(e) => setLastName(e.target.value)}
+    required
+  />
+  <input
+    type="number"
+    placeholder="Age"
+    value={age}
+    onChange={(e) => setAge(e.target.value)}
+    required
+  />
+  <button type="submitCreate" className={buttonClass}>Create</button>
+  {message && <p>{message}</p>}
+</form>
   );
 }
