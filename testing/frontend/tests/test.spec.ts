@@ -66,6 +66,7 @@ test('Submitting user information should return OK response', async ({ page }) =
   
     // Log the table contents for debugging
     const tableText = await page.locator('tbody').innerText();
+    console.log(tableText);
   
     // Locate the row containing the user data
     const userRow = page.locator('tbody tr').filter({ hasText: 'John' });
@@ -105,15 +106,20 @@ test('Submitting user information should return OK response', async ({ page }) =
     
     // Find the row containing the newly created user
     const userRow = page.locator('tbody tr').filter({ hasText: 'Dude' });
-    
-    // Locate and click the delete button for the newly created user
-    const deleteButton = userRow.locator('button:has-text("Delete")');
-    await deleteButton.click();
-    
-    // Wait for the deletion process to complete (adjust selector if necessary)
-    await page.waitForSelector('p', { state: 'visible' });
-    
-    // Verify that the user has been deleted by checking if the user no longer exists in the table
-    const deletedUserRow = page.locator('tbody tr').filter({ hasText: 'Dude' });
-    await expect(deletedUserRow).toHaveCount(0);  // Ensure the user no longer exists in the list
-  });
+
+    // Extract the user ID from the first column
+    const userId = await userRow.locator('td:first-child').innerText();
+
+    // Enter the user ID into the delete input field
+    await page.fill('input[placeholder="Enter User ID to Delete"]', userId);
+
+    // Click the delete button
+    await page.click('#deleteButton');
+
+    // Wait for confirmation message
+    await expect(page.locator('p')).toContainText(`User with ID ${userId} deleted successfully.`);
+
+    // Verify that the user no longer exists in the table
+    await page.waitForTimeout(500); // Small delay to ensure UI updates
+    await expect(page.locator('tbody tr').filter({ hasText: 'Dude' })).toHaveCount(0);
+});

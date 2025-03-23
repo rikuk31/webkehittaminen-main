@@ -17,21 +17,4 @@ export default function DeleteUser() {
       setMessage("Error: " + (error.response?.data?.error || error.message));
     }
   };
-
-  return (
-    <div>
-      <h2>Delete User</h2>
-      <form onSubmit={handleDelete}>
-        <input
-          type="text"
-          placeholder="User ID"
-          value={id}
-          onChange={(e) => setId(e.target.value)}
-          required
-        />
-        <button type="submit">Delete</button>
-      </form>
-      {message && <p>{message}</p>}
-    </div>
-  );
 }

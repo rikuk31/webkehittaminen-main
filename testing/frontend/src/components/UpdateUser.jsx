@@ -64,4 +64,3 @@ export default function UpdateUser({ onUserUpdated, buttonClass = "btn btn-warni
         </div>
     );
 }
-

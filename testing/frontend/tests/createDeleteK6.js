@@ -21,50 +21,29 @@ export const options = {
 
 export default async function () {
     const page = await browser.newPage();
-    page.on('console', (msg) => console.log('PAGE LOG:', msg.text()));
 
-        await page.goto(appAddress);
+    await page.goto(appAddress);
+    await page.waitForSelector('input[placeholder="First Name"]');
 
-        const firstName = "Testi";
-        const lastName = "Testaaja";
-        const age = 69;
+    const firstName = `TestFirstName-${Math.random().toString(36).substring(7)}`;
+    const lastName = `TestLastName-${Math.random().toString(36).substring(7)}`;
+    const age = 69;
 
-        await page.locator('input[placeholder="First Name"]').type(firstName);
-        await page.locator('input[placeholder="Last Name"]').type(lastName);
-        await page.locator('input[placeholder="Age"]').type(age.toString());
-        //await page.locator('button[type="submitCreate"]').click();
+    await page.locator('input[placeholder="First Name"]').type(firstName);
+    await page.locator('input[placeholder="Last Name"]').type(lastName);
+    await page.locator('input[placeholder="Age"]').type(age.toString());
+    await page.locator('#createButton').click();
 
+    // Wait for the user to be created and the table to update.
+    await page.waitForSelector('table tbody tr:last-child td:first-child', { timeout: '10s' });
 
-        const tableRows = await page.$$('table tbody tr');
-        const initialRowCount = tableRows.length;
+    // Extract the ID of the last created user.
+    await page.reload();
+    const userId = await page.locator('table tbody tr:last-child td:first-child').textContent();
 
-        for (const row of tableRows) {
-            
-            const cells = await row.$$('td');
+    // Type the user ID into the delete input and click the delete button.
+    await page.locator('input[placeholder="Enter User ID to Delete"]').type(userId);
+    await page.locator('#deleteButton').click(); // Using text selector for robustness
 
-            const rowFirstName = await cells[1].textContent(); // Await the textContent
-            const rowLastName = await cells[2].textContent(); // Await the textContent
-            const rowAge = await cells[3].textContent();
-
-            console.log("First name: " + await rowFirstName);
-            console.log("Last Name: " + await rowLastName);
-            console.log("Age: "+ await rowAge);
-
-            /*if (cells.length >= 4) {
-
-
-                if (rowFirstName === firstName && rowLastName === lastName && rowAge === age.toString()) {
-                    const deleteButton = await row.locator('button[data-testid="delete-button"]').first();
-                    await deleteButton.click();
-
-                    const newTableRows = await page.$$('table tbody tr');
-                    check(newTableRows, {
-                        'Row count reduced': (rows) => rows.length < initialRowCount,
-                    });
-                    break;
-                }
-            }*/
-        }
-        await page.close();
-    sleep(1);
+    await page.close();
 }

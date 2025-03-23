@@ -29,30 +29,30 @@ export default function CreateUser({ onUserAdded, buttonClass = "btn btn-primary
   };
 
   return (
-<form onSubmit={handleSubmit} className="form-group">
-  <input
-    type="text"
-    placeholder="First Name"
-    value={firstName}
-    onChange={(e) => setFirstName(e.target.value)}
-    required
-  />
-  <input
-    type="text"
-    placeholder="Last Name"
-    value={lastName}
-    onChange={(e) => setLastName(e.target.value)}
-    required
-  />
-  <input
-    type="number"
-    placeholder="Age"
-    value={age}
-    onChange={(e) => setAge(e.target.value)}
-    required
-  />
-  <button type="submitCreate" className={buttonClass}>Create</button>
-  {message && <p>{message}</p>}
-</form>
+    <div className="form-group">
+      <input
+        type="text"
+        placeholder="First Name"
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+        required
+      />
+      <input
+        type="text"
+        placeholder="Last Name"
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
+        required
+      />
+      <input
+        type="number"
+        placeholder="Age"
+        value={age}
+        onChange={(e) => setAge(e.target.value)}
+        required
+      />
+      <button type="submit" id="createButton" className={buttonClass} onClick={handleSubmit}>Create</button>
+      {message && <p>{message}</p>}
+    </div>
   );
 }
