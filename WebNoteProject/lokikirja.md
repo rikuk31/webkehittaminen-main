@@ -1,4 +1,4 @@
-# Project logbook
+# Projektin lokikirja
 
 | Päivämäärä  | Käytetty aika | Aihe |  Lopputulos |
 | :---  |     :---:      |     :---:      |     :---:      |
