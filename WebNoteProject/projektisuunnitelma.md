@@ -162,3 +162,82 @@ Konteksti: Anna käyttää sovellusta hallitakseen tärkeimmät liiketoimintamui
 3.	Anna painaa tähti-ikonia, joka lisää muistiinpanon suosikkeihin.
 4.	Sovellus vaihtaa tähti-ikonin värin siniseksi muistiinpanon nimen vieressä aloitussi-vulla.
 5.	Sovellus lisää muistiinpanon "Suosikit"-välilehdelle, jolloin Anna voi nopeasti löytää ja tarkistaa sen myöhemmin.
+
+# Käyttöliittymän prototyypit
+
+**Kuvat tähän**
+
+# Tietoarkkitehtuuri ja tekninen suunnittelu
+## Arkkitehtuuri
+Sovellus noudattaa kolmitasoarkkitehtuuria (three-tier architecture):
+-	Käyttöliittymä (Frontend)
+- Sovelluslogiikka (Backend)
+- Tietokanta (Database)
+# Käyttöliittymä
+Käyttöliittymässä käytetään Reactilla toteutettua webbisivua. Sivusto on responsiivinen eli sivusto mukautuu laitteen näytön koon mukaan. Sivuston kehittämisen nopeuttamiseksi käytössä on myös Boostrap. Käyttöliittymä asennetaan Azureen.
+# Sovelluslogiikka
+Sovelluslogiikka toteutetaan Käyttämällä Node.js. Sovelluslogiikan palvelussa hyödynnetään RESTful Api:n rajapintaa resurssien käsittelyä varten. Palvelu tulee tukemaan myös CRUD-toimenpiteitä rajapinnan kautta. Palveluun asennetaan IP-rajoitus, joka sallii liikenteen vain käyttöliittymän kautta.
+# Tietokanta ja tiedonhallinta
+Tietokanta tulee olemaan PostgreSQL-pohjainen. Tiedot tallennetaan Azuressa olevaan tietokantaan. Myös tietokannassa on käytössä IP-rajoitus, joka sallii tietoliikenteen vain sovelluslogiikan osoitteesta.
+
+# Projektinhallinta
+Projektissa käytetään projektinhallintaohjelmana Trelloa, joka auttaa tiimiä seuraamaan tehtäviä, aikarajoja ja vastuuhenkilöitä. Trello tarjoaa visuaalisen ja helppokäyttöisen työkalun projektin etenemisen hallintaan, mikä mahdollistaa tehokkaan yhteistyön ja läpinäkyvyyden kaikille projektin osapuolille.
+## Projektin tavoitteet
+Projektin tavoitteena on luoda toimiva verkkosivuston perusrakenne, joka täyttää käyttäjien tarpeet ja tarjoaa selkeän pohjan jatkokehitykselle. Tavoitteena on, että verkkosivut ovat käyttökelpoiset ja tarjoavat perustason toiminnallisuudet, kuten käyttäjäystävällisen navigoinnin ja visuaalisen ulkoasun. Verkkosivuston tulevaisuudessa toteutettavat laajennukset ja parannukset mahdollistavat projektin jatkokehittämisen asiakkaiden tarpeiden mukaan.
+## Projektin rajaus
+Projektissa luodaan perustasoltaan toimivat verkkosivut. Tämä tarkoittaa sitä, että projekti keskittyy verkkosivuston rakenteen ja perustoimintojen luomiseen, kuten etusivun, sisällönhallinnan ja yhteystietosivun rakentamiseen. Tässä vaiheessa ei oteta huomioon monimut-kaisempia toiminnallisuuksia, kuten käyttäjien rekisteröitymistä tai maksujärjestelmiä. Tavoitteena on luoda vankka perusta, joka voidaan helposti laajentaa ja mukauttaa tulevaisuudessa asiakkaan tarpeiden mukaan. Täysin valmista tuotetta ei tule tämän projektin valmistuessa, mutta lopputulos on toimiva ja käyttökelpoinen alusta.
+## Kustannukset
+Projektissa käytetään Azure-pilvipalvelua, joka on maksuton opiskelijaprojekteille. Tämä tarjoaa tarvittavat resursseja, kuten verkkosivuston isännöinnin ja tietokannan, ilman lisäkustannuksia. Projektin kustannukset rajoittuvat pääasiassa opiskelijan työpanokseen, koska suurin osa resursseista katetaan pilvipalvelun maksuttomalla tarjouksella. Mahdollisia lisäkustannuksia voi syntyä, jos projektin laajuus kasvaa tai jos tarvitaan muita kolmannen osa-puolen palveluja. Kustannukset arvioidaan tarkemmin projektin edetessä, mutta Azure-pilvipalvelun hyödyntäminen pitää kustannukset minimissä.
+## Projektiorganisaatio
+Projektiorganisaatio koostuu yhdestä tieto- ja viestintätekniikan insinööriopiskelijasta, joka toimii projektin päävastuuhenkilönä. Hänen roolinsa on suunnitella ja toteuttaa verkkosivuston perustan sekä koordinoida tarvittavat toimenpiteet projektin loppuun saattamiseksi. Linja-organisaationa toimii Web-ohjelmointi-kurssin opettaja Ville Heikkiniemi, joka ohjaa projektin etenemistä ja antaa tarvittavaa tukea ja palautetta. Opettaja valvoo projektin sujuvuutta, aika-rajoja ja tavoitteiden saavuttamista, mutta ei ole mukana päivittäisessä kehitystyössä.
+
+# Käyttäjätestaus
+## Testauksen tavoite:
+Testauksen tarkoituksena on arvioida sovelluksen käytettävyyttä, toimivuutta ja käyttökokemusta muistiinpanojen hallinnassa. Tavoitteena on varmistaa, että käyttäjät voivat lisätä, muokata, poistaa, hakea, suodattaa ja merkitä muistiinpanoja suosikeiksi ilman virheitä ja että sovellus on helppokäyttöinen ja vastaa käyttäjien tarpeita
+## Testauksen kohde
+Sovellus, jonka avulla käyttäjät voivat hallita muistiinpanojaan:
+- Muistiinpanon lisääminen
+- Muistiinpanon muokkaaminen
+- Muistiinpanon poistaminen
+- Muistiinpanon hakeminen ja suodatus
+- Muistiinpanon lisääminen suosikkeihin
+
+## Testattavat ominaisuudet
+- Lisääminen: Muistiinpanon luominen, otsikon ja sisällön lisääminen, tärkeysluokan valinta.
+- Muokkaaminen: Muistiinpanon muokkaaminen, mukaan lukien otsikon ja sisällön muuttaminen.
+- Poistaminen: Muistiinpanon poistaminen varmistusviestin kanssa.
+- Haku ja suodatus: Muistiinpanojen hakeminen hakusanoilla ja tärkeysluokan perusteella.
+- Suosikit: Muistiinpanon merkitseminen suosikiksi ja sen löytyminen "Suosikit"-välilehdeltä.
+
+## Testausmenetelmät
+- Käytettävyystestaus: Testaajat suorittavat ennalta määritellyt tehtävät ja arvioivat sovelluksen käytettävyyttä.
+- A/B-testit: Vertailu erilaisten ominaisuuksien tai toiminnallisuuksien välillä, esim. eri tapoja merkitä suosikkimuistiinpanoja.
+- Kyselyt ja haastattelut: Testauksen jälkeen osallistujat täyttävät kyselylomakkeen ja antavat palautetta kokemuksistaan.
+- Virheiden ja ongelmien dokumentointi: Kirjataan kaikki ongelmat, joita käyttäjät kokevat, sekä kuinka nopeasti ja helposti ne voidaan ratkaista.
+
+## Testiskenaariot
+## Muistiinpanon lisääminen:
+- Tehtävä: Käyttäjä luo uuden muistiinpanon, lisää otsikon ja sisällön, valitsee tärkeysluokan ja tallentaa sen.
+- Arviointikriteerit: Voiko käyttäjä lisätä muistiinpanon ja näkyykö se aloitussivulla? Onko tärkeysluokan valinta intuitiivista?
+
+## Muistiinpanon muokkaaminen:
+- Tehtävä: Käyttäjä muokkaa aiemmin tallennettua muistiinpanoa (otsikko ja/tai sisältö) ja tallentaa sen.
+- Arviointikriteerit: Toimiiko muokkaustoiminto oikein? Näkyykö muokattu muistiinpano oikein aloitussivulla?
+
+## Muistiinpanon poistaminen:
+- Tehtävä: Käyttäjä poistaa muistiinpanon ja vahvistaa poiston.
+- Arviointikriteerit: Poistettavaksi valittu muistiinpano katoaa aloitussivulta ja ei ole enää saatavilla.
+
+## Haku ja suodatus:
+- Tehtävä: Käyttäjä etsii ja suodattaa muistiinpanoja hakusanoilla ja tärkeysluokilla.
+- Arviointikriteerit: Toimiiko haku ja suodatus oikein ja tuottaako se oikeat tulokset?
+
+## Muistiinpanon lisääminen suosikkeihin:
+- Tehtävä: Käyttäjä merkitsee muistiinpanon suosikiksi ja tarkistaa sen "Suosikit"-välilehdeltä.
+- Arviointikriteerit: Onko suosikkien lisääminen ja löytämisen prosessi selkeä ja toimiva?
+
+## Testauksen arviointi ja mittarit
+- Tehtävän suorittamisaika: Kuinka kauan kunkin tehtävän suorittaminen kestää?
+- Virheiden määrä: Kuinka monta virheellistä tai epäselvää toimintaa esiintyy?
+- Käytettävyys: Käyttäjien yleinen tyytyväisyys sovelluksen käytettävyyteen.
+- Tehtävän onnistumisprosentti: Kuinka suuri osa testaajista pystyy suorittamaan tehtävän ilman apua?
