@@ -192,7 +192,7 @@ Projektissa käytetään Azure-pilvipalvelua, joka on maksuton opiskelijaprojekt
 Projektiorganisaatio koostuu yhdestä tieto- ja viestintätekniikan insinööriopiskelijasta, joka toimii projektin päävastuuhenkilönä. Hänen roolinsa on suunnitella ja toteuttaa verkkosivuston perustan sekä koordinoida tarvittavat toimenpiteet projektin loppuun saattamiseksi. Linja-organisaationa toimii Web-ohjelmointi-kurssin opettaja Ville Heikkiniemi, joka ohjaa projektin etenemistä ja antaa tarvittavaa tukea ja palautetta. Opettaja valvoo projektin sujuvuutta, aika-rajoja ja tavoitteiden saavuttamista, mutta ei ole mukana päivittäisessä kehitystyössä.
 
 # Käyttäjätestaus
-## Testauksen tavoite:
+## Testauksen tavoite
 Testauksen tarkoituksena on arvioida sovelluksen käytettävyyttä, toimivuutta ja käyttökokemusta muistiinpanojen hallinnassa. Tavoitteena on varmistaa, että käyttäjät voivat lisätä, muokata, poistaa, hakea, suodattaa ja merkitä muistiinpanoja suosikeiksi ilman virheitä ja että sovellus on helppokäyttöinen ja vastaa käyttäjien tarpeita
 ## Testauksen kohde
 Sovellus, jonka avulla käyttäjät voivat hallita muistiinpanojaan:
@@ -216,23 +216,23 @@ Sovellus, jonka avulla käyttäjät voivat hallita muistiinpanojaan:
 - Virheiden ja ongelmien dokumentointi: Kirjataan kaikki ongelmat, joita käyttäjät kokevat, sekä kuinka nopeasti ja helposti ne voidaan ratkaista.
 
 ## Testiskenaariot
-## Muistiinpanon lisääminen:
+## Muistiinpanon lisääminen
 - Tehtävä: Käyttäjä luo uuden muistiinpanon, lisää otsikon ja sisällön, valitsee tärkeysluokan ja tallentaa sen.
 - Arviointikriteerit: Voiko käyttäjä lisätä muistiinpanon ja näkyykö se aloitussivulla? Onko tärkeysluokan valinta intuitiivista?
 
-## Muistiinpanon muokkaaminen:
+## Muistiinpanon muokkaaminen
 - Tehtävä: Käyttäjä muokkaa aiemmin tallennettua muistiinpanoa (otsikko ja/tai sisältö) ja tallentaa sen.
 - Arviointikriteerit: Toimiiko muokkaustoiminto oikein? Näkyykö muokattu muistiinpano oikein aloitussivulla?
 
-## Muistiinpanon poistaminen:
+## Muistiinpanon poistaminen
 - Tehtävä: Käyttäjä poistaa muistiinpanon ja vahvistaa poiston.
 - Arviointikriteerit: Poistettavaksi valittu muistiinpano katoaa aloitussivulta ja ei ole enää saatavilla.
 
-## Haku ja suodatus:
+## Haku ja suodatus
 - Tehtävä: Käyttäjä etsii ja suodattaa muistiinpanoja hakusanoilla ja tärkeysluokilla.
 - Arviointikriteerit: Toimiiko haku ja suodatus oikein ja tuottaako se oikeat tulokset?
 
-## Muistiinpanon lisääminen suosikkeihin:
+## Muistiinpanon lisääminen suosikkeihin
 - Tehtävä: Käyttäjä merkitsee muistiinpanon suosikiksi ja tarkistaa sen "Suosikit"-välilehdeltä.
 - Arviointikriteerit: Onko suosikkien lisääminen ja löytämisen prosessi selkeä ja toimiva?
 
