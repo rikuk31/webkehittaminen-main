@@ -93,7 +93,7 @@ Seurata asiakkaidensa edistymistä ja antaa heille muistiinpanot heidän harjoit
 **Käyttötilanne:**
 
 **Käyttäjä:** Timo, 35, IT-alan työntekijä  
-**Konteksti:** Timo työskentelee ohjelmistokehittäjänä ja käyttää sovellusta hallitakseen työteh-täviään. Hän on lisännyt useita muistiinpanoja eri projekteihin, mutta haluaa poistaa van-hentuneen muistiinpanon, joka ei ole enää tarpeellinen.  
+**Konteksti:** Timo työskentelee ohjelmistokehittäjänä ja käyttää sovellusta hallitakseen työtehtäviään. Hän on lisännyt useita muistiinpanoja eri projekteihin, mutta haluaa poistaa vanhentuneen muistiinpanon, joka ei ole enää tarpeellinen.  
 **Toimintakulku:** 
 1)	Timo avaa sovelluksen selaimella ja menee aloitussivulle, jossa hän näkee kaikki luodut muistiinpanot.
 2)	Timo valitsee poistettavan muistiinpanon, joka avaa sen tarkemman näkymän.
@@ -102,14 +102,14 @@ Seurata asiakkaidensa edistymistä ja antaa heille muistiinpanot heidän harjoit
 5)	Sovellus poistaa muistiinpanon ja se ei enää näy Timon aloitussivulla. Timo jatkaa muiden muistiinpanojen hallintaa.
 4.3  Muistiinpanon hakeminen ja suodatus
 
-## Muistiinpanon hakeminen ja suodatus
+## Muistiinpanon hakeminen
   	
 **Käyttötapaus:**
 
 1)	Käyttäjä avaa aloitussivun, jossa kaikki muistiinpanot näkyvät.
-2)	Käyttäjä kirjoittaa hakukenttään hakusanan, joka hakee sisältöä otsikon perusteella ja/tai vaihtoehtoisesti valitsee tärkeysluokan, joka rajaa tuloksia.
-3)	Sovellus näyttää hakutulokset valittujen hakuehtojen ja tärkeysluokan mukaan.
-4)	Käyttäjä voi tarkentaa hakuaan tai suodatustaan edelleen, jos hakutulokset eivät ole riittävän tarkkoja.
+2)	Käyttäjä kirjoittaa hakukenttään hakusanan, joka hakee sisältöä hakusanalla otsikon ja sisällön mukaan.
+3)	Sovellus näyttää hakutulokset.
+4)	Käyttäjä voi tarkentaa hakuaan, jos hakutulokset eivät ole riittävän tarkkoja.
 5)	Käyttäjä valitsee haluamansa muistiinpanon hakutuloksista ja avaa sen tarkempaan näkymään.
    
 **Käyttötilanne:**  
@@ -118,19 +118,19 @@ Käyttäjä: Laura, 26, Vapaa-ajan valmentaja
 Konteksti: Laura on henkilökohtainen valmentaja ja käyttää sovellusta asiakkaidensa har-joitusten seuraamiseen. Hänellä on useita muistiinpanoja eri asiakkaille ja haluaa löytää nopeasti tietyn asiakkaan harjoitusten muistiinpanot.  
 Toimintakulku:  
 1.	Laura avaa sovelluksen mobiililaitteella ja menee aloitussivulle, jossa näkyvät kaikki hänen luomansa muistiinpanot.
-2.	Hän kirjoittaa hakukenttään asiakkaan nimen, joka on mukana muistiinpanon otsi-kossa, ja/tai valitsee tärkeysluokan, joka rajaa hakutuloksia vain tärkeisiin asiakkaille tehtyihin muistiinpanoihin.
+2.	Hän kirjoittaa hakukenttään asiakkaan nimen, joka on mukana muistiinpanon otsikossa, ja/tai valitsee tärkeysluokan, joka rajaa hakutuloksia vain tärkeisiin asiakkaille tehtyihin muistiinpanoihin.
 3.	Sovellus näyttää hakutulokset, jotka vastaavat kirjoitettua hakusanaa ja/tai valittua tärkeysluokkaa.
-4.	Laura tarkentaa hakuaan lisäämällä toisen hakusanan tai muuttamalla tärkeysluok-kaa, jos hakutulokset eivät ole riittävän tarkkoja.
+4.	Laura tarkentaa hakuaan lisäämällä toisen hakusanan tai muuttamalla tärkeysluokkaa, jos hakutulokset eivät ole riittävän tarkkoja.
 5.	Laura valitsee haluamansa muistiinpanon hakutuloksista ja avaa sen tarkempaan näkymään, jossa hän voi lisätä lisätietoja asiakkaan harjoituksista.
 
 ## Muistiinpanon muokkaus
 
 **Käyttötapaus:**  
 
-1)	Käyttäjä valitsee muokattavan muistiinpanon aloitussivulta.
-2)	Käyttäjä painaa "Muokkaa" -painiketta, joka avaa muistiinpanon muokkausnäkymän.
-3)	Käyttäjä voi muokata muistiinpanon otsikkoa ja/tai sisältöä sekä asettaa tai vaihtaa tärkeysluokan.
-4)	Käyttäjä painaa "Tallenna" -painiketta, jolloin muokattu muistiinpano tallentuu ja nä-kyy päivitettynä aloitussivulla.
+1)	Käyttäjä avaa aloitussivun, jossa kaikki muistiinpanot näkyvät.
+2)	Käyttäjä painaa valitsemaansa muistiinpanoa, joka avaa muistiinpanon uuteen näkymään.
+3)	Käyttäjä voi muokata muistiinpanon otsikkoa ja sisältöä painamalla tekstiä.
+4)	Käyttäjä painaa "Tallenna" -painiketta, jolloin muokattu muistiinpano tallentuu ja näkyy päivitettynä aloitussivulla.
    
 **Käyttötilanne:**
 
@@ -173,11 +173,11 @@ Sovellus noudattaa kolmitasoarkkitehtuuria (three-tier architecture):
 -	Käyttöliittymä (Frontend)
 - Sovelluslogiikka (Backend)
 - Tietokanta (Database)
-# Käyttöliittymä
+## Käyttöliittymä
 Käyttöliittymässä käytetään Reactilla toteutettua webbisivua. Sivusto on responsiivinen eli sivusto mukautuu laitteen näytön koon mukaan. Sivuston kehittämisen nopeuttamiseksi käytössä on myös Boostrap. Käyttöliittymä asennetaan Azureen.
-# Sovelluslogiikka
+## Sovelluslogiikka
 Sovelluslogiikka toteutetaan Käyttämällä Node.js. Sovelluslogiikan palvelussa hyödynnetään RESTful Api:n rajapintaa resurssien käsittelyä varten. Palvelu tulee tukemaan myös CRUD-toimenpiteitä rajapinnan kautta. Palveluun asennetaan IP-rajoitus, joka sallii liikenteen vain käyttöliittymän kautta.
-# Tietokanta ja tiedonhallinta
+## Tietokanta ja tiedonhallinta
 Tietokanta tulee olemaan PostgreSQL-pohjainen. Tiedot tallennetaan Azuressa olevaan tietokantaan. Myös tietokannassa on käytössä IP-rajoitus, joka sallii tietoliikenteen vain sovelluslogiikan osoitteesta.
 
 # Projektinhallinta
