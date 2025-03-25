@@ -165,7 +165,19 @@ Konteksti: Anna käyttää sovellusta hallitakseen tärkeimmät liiketoimintamui
 
 # Käyttöliittymän prototyypit
 
-**Kuvat tähän**
+## Aloitussivu
+![Aloitussivu](https://github.com/user-attachments/assets/3da2d073-3f5a-4e2c-96fb-07f0cf2e6626)
+
+
+## Poiston vahvistus
+![Poiston vahvistus](https://github.com/user-attachments/assets/d4a5fe70-5ec8-4b02-aee7-9b4e3110759b)
+
+## Suosikit
+![Suosikit](https://github.com/user-attachments/assets/0275254b-784f-447d-90a0-9f7fab6870a9)
+
+## Muistiinpanon muokkaus
+![Muokkaus](https://github.com/user-attachments/assets/fc81e7ab-c9d3-4154-ac31-bd93aef125f7)
+
 
 # Tietoarkkitehtuuri ja tekninen suunnittelu
 ## Arkkitehtuuri
