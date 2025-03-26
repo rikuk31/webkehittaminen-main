@@ -205,7 +205,7 @@ Projektiorganisaatio koostuu yhdestä tieto- ja viestintätekniikan insinöörio
 
 # Käyttäjätestaus
 ## Testauksen tavoite
-Testauksen tarkoituksena on arvioida sovelluksen käytettävyyttä, toimivuutta ja käyttökokemusta muistiinpanojen hallinnassa. Tavoitteena on varmistaa, että käyttäjät voivat lisätä, muokata, poistaa, hakea, suodattaa ja merkitä muistiinpanoja suosikeiksi ilman virheitä ja että sovellus on helppokäyttöinen ja vastaa käyttäjien tarpeita
+Testauksen tarkoituksena on arvioida sovelluksen käytettävyyttä, toimivuutta ja käyttökokemusta muistiinpanojen hallinnassa. Tavoitteena on varmistaa, että sovellus toimii kuten on suunniteltu. Käyttäjät voivat lisätä, muokata, poistaa, hakea, suodattaa ja merkitä muistiinpanoja suosikeiksi ilman virheitä ja että sovellus on helppokäyttöinen ja vastaa käyttäjien tarpeita.
 ## Testauksen kohde
 Sovellus, jonka avulla käyttäjät voivat hallita muistiinpanojaan:
 - Muistiinpanon lisääminen
@@ -222,34 +222,8 @@ Sovellus, jonka avulla käyttäjät voivat hallita muistiinpanojaan:
 - Suosikit: Muistiinpanon merkitseminen suosikiksi ja sen löytyminen "Suosikit"-välilehdeltä.
 
 ## Testausmenetelmät
-- Käytettävyystestaus: Testaajat suorittavat ennalta määritellyt tehtävät ja arvioivat sovelluksen käytettävyyttä.
-- A/B-testit: Vertailu erilaisten ominaisuuksien tai toiminnallisuuksien välillä, esim. eri tapoja merkitä suosikkimuistiinpanoja.
-- Kyselyt ja haastattelut: Testauksen jälkeen osallistujat täyttävät kyselylomakkeen ja antavat palautetta kokemuksistaan.
-- Virheiden ja ongelmien dokumentointi: Kirjataan kaikki ongelmat, joita käyttäjät kokevat, sekä kuinka nopeasti ja helposti ne voidaan ratkaista.
+- Koodikatselmointi Koodin tarkistus virheiden ja parannusehdotusten löytämiseksi.
+- Yksikkötestaus (jest / vitest) Yksittäisten komponenttien ja funktioiden testaus.
+- Päästä-päähän testaus (Playwright) Koko sovelluksen toiminnallisuuden testaus käyttäjän näkökulmasta.
+- Kuormitustestaus Sovelluksen suorituskyvyn testaus eri kuormitustilanteissa.
 
-## Testiskenaariot
-## Muistiinpanon lisääminen
-- Tehtävä: Käyttäjä luo uuden muistiinpanon, lisää otsikon ja sisällön, valitsee tärkeysluokan ja tallentaa sen.
-- Arviointikriteerit: Voiko käyttäjä lisätä muistiinpanon ja näkyykö se aloitussivulla? Onko tärkeysluokan valinta intuitiivista?
-
-## Muistiinpanon muokkaaminen
-- Tehtävä: Käyttäjä muokkaa aiemmin tallennettua muistiinpanoa (otsikko ja/tai sisältö) ja tallentaa sen.
-- Arviointikriteerit: Toimiiko muokkaustoiminto oikein? Näkyykö muokattu muistiinpano oikein aloitussivulla?
-
-## Muistiinpanon poistaminen
-- Tehtävä: Käyttäjä poistaa muistiinpanon ja vahvistaa poiston.
-- Arviointikriteerit: Poistettavaksi valittu muistiinpano katoaa aloitussivulta ja ei ole enää saatavilla.
-
-## Haku ja suodatus
-- Tehtävä: Käyttäjä etsii ja suodattaa muistiinpanoja hakusanoilla ja tärkeysluokilla.
-- Arviointikriteerit: Toimiiko haku ja suodatus oikein ja tuottaako se oikeat tulokset?
-
-## Muistiinpanon lisääminen suosikkeihin
-- Tehtävä: Käyttäjä merkitsee muistiinpanon suosikiksi ja tarkistaa sen "Suosikit"-välilehdeltä.
-- Arviointikriteerit: Onko suosikkien lisääminen ja löytämisen prosessi selkeä ja toimiva?
-
-## Testauksen arviointi ja mittarit
-- Tehtävän suorittamisaika: Kuinka kauan kunkin tehtävän suorittaminen kestää?
-- Virheiden määrä: Kuinka monta virheellistä tai epäselvää toimintaa esiintyy?
-- Käytettävyys: Käyttäjien yleinen tyytyväisyys sovelluksen käytettävyyteen.
-- Tehtävän onnistumisprosentti: Kuinka suuri osa testaajista pystyy suorittamaan tehtävän ilman apua?
