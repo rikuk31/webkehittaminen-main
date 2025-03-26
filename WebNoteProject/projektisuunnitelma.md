@@ -209,7 +209,7 @@ Projektiorganisaatio koostuu yhdestä tieto- ja viestintätekniikan insinöörio
 
 # Käyttäjätestaus
 ## Testauksen tavoite
-Testauksen tarkoituksena on arvioida sovelluksen käytettävyyttä, toimivuutta ja käyttökokemusta muistiinpanojen hallinnassa. Tavoitteena on varmistaa, että sovellus toimii kuten on suunniteltu. Käyttäjät voivat lisätä, muokata, poistaa, hakea, suodattaa ja merkitä muistiinpanoja suosikeiksi ilman virheitä ja että sovellus on helppokäyttöinen ja vastaa käyttäjien tarpeita.
+Testauksen tarkoituksena on arvioida sovelluksen käytettävyyttä, toimivuutta ja käyttökokemusta muistiinpanojen hallinnassa. Tavoitteena on varmistaa, että sovellus toimii kuten on suunniteltu. Käyttäjät voivat lisätä, muokata, poistaa, hakea, suodattaa ja merkitä muistiinpanoja suosikeiksi ilman virheitä ja että sovellus on helppokäyttöinen ja vastaa käyttäjien tarpeita. Lisäksi testauksen tavoitteena on tunnistaa mahdolliset suorituskykyongelmat ja varmistaa sovelluksen turvallisuus.
 ## Testauksen kohde
 Sovellus, jonka avulla käyttäjät voivat hallita muistiinpanojaan:
 - Muistiinpanon lisääminen
