@@ -229,8 +229,8 @@ Sovellus, jonka avulla käyttäjät voivat hallita muistiinpanojaan:
 
 
 ## Testausmenetelmät
-- Koodikatselmointi Koodin tarkistus virheiden ja parannusehdotusten löytämiseksi.
-- Yksikkötestaus (jest / vitest) Yksittäisten komponenttien ja funktioiden testaus.
-- Päästä-päähän testaus (Playwright) Koko sovelluksen toiminnallisuuden testaus käyttäjän näkökulmasta.
-- Kuormitustestaus Sovelluksen suorituskyvyn testaus eri kuormitustilanteissa.
+- Koodikatselmointi: Koodin tarkistus virheiden ja parannusehdotusten löytämiseksi.
+- Yksikkötestaus: (jest / vitest) Yksittäisten komponenttien ja funktioiden testaus.
+- Päästä-päähän testaus: (Playwright) Koko sovelluksen toiminnallisuuden testaus käyttäjän näkökulmasta.
+- Kuormitustestaus: Sovelluksen suorituskyvyn testaus eri kuormitustilanteissa.
 
