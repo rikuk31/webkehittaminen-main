@@ -1,6 +1,7 @@
 # 27.3
+😎 = Tehty 🤯 = Työn alla
 ## Git:
-1) Paranna projektin kansiorakennetta.
+1) Paranna projektin kansiorakennetta. 😎
 2) Protojen kuvia voisi hieman pienentää.
 
 ## Käyttötapaukset: 
