@@ -5,7 +5,7 @@
 2) Protojen kuvia voisi hieman pienentää.
 
 ## Käyttötapaukset: 
-1) Yhtenäistä käyttötapausten nimet, eli käyttäjää kutsutaan geneerisesti tai nimeltä toimintakulussa.
+1) Yhtenäistä käyttötapausten nimet, eli käyttäjää kutsutaan geneerisesti tai nimeltä toimintakulussa.😎
 
 ## Tekninen: 
 1) Tee tietokannan taulukko rakenne.
