@@ -8,3 +8,4 @@
 | 25.3.2025 | 1t | Ensimmäisen vaiheen suunnittelua | Protyyppien lisääminen projektisuunnitelmaan ja tyylistystä  |
 | 26.3.2025 | 2t | Ensimmäisen vaiheen suunnittelua |  Projektisuunnitelman viimeistelyä ja tyylitystä |
 | 27.3.2025 | 1t | Ensimmäisen vaiheen suunnittelua |  Kehitysideoiden miettimistä ja kirjaamista |
+| 1.4.2025 | 2t | Ensimmäisen vaiheen suunnittelua |  Tietokannan rakenteen ja testitapauksien lisääminen sekä käyttötapausten yhtenäistämistä |
