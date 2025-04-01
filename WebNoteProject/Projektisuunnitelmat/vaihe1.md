@@ -194,6 +194,27 @@ Sovellus noudattaa kolmitasoarkkitehtuuria (three-tier architecture):
 Käyttöliittymässä käytetään Reactilla toteutettua webbisivua. Sivusto on responsiivinen eli sivusto mukautuu laitteen näytön koon mukaan. Sivuston kehittämisen nopeuttamiseksi käytössä on myös Boostrap. Käyttöliittymä asennetaan Azureen.
 ## Sovelluslogiikka
 Sovelluslogiikka toteutetaan Käyttämällä Node.js. Sovelluslogiikan palvelussa hyödynnetään RESTful Api:n rajapintaa resurssien käsittelyä varten. Palvelu tulee tukemaan myös CRUD-toimenpiteitä rajapinnan kautta. Palveluun asennetaan IP-rajoitus, joka sallii liikenteen vain käyttöliittymän kautta.
+## Sovelluslogiikan toiminta
+**Muistiinpanojen hakeminen (GET /notes)**
+
+Backend hakee kaikki muistiinpanot tietokannasta ja palauttaa ne JSON-muodossa.
+
+**Yksittäisen muistiinpanon hakeminen (GET /notes/:id)**
+
+Backend hakee muistiinpanon id:n perusteella ja palauttaa sen.
+
+**Muistiinpanon luominen (POST /notes)**
+
+Backend vastaanottaa uuden muistiinpanon title- ja content-kentät, tallentaa sen tietokantaan ja palauttaa luodun muistiinpanon.
+
+**Muistiinpanon päivittäminen (PUT /notes/:id)**
+
+Backend päivittää olemassa olevan muistiinpanon id:n perusteella ja palauttaa päivitetyn tiedon.
+
+**Muistiinpanon poistaminen (DELETE /notes/:id)**
+
+Backend poistaa muistiinpanon id:n perusteella ja palauttaa vahvistuksen poistosta.
+
 ## Tietokanta ja tiedonhallinta
 Tietokanta tulee olemaan PostgreSQL-pohjainen. Tiedot tallennetaan Azuressa olevaan tietokantaan. Myös tietokannassa on käytössä IP-rajoitus, joka sallii tietoliikenteen vain sovelluslogiikan osoitteesta.
 # Projektinhallinta
@@ -233,4 +254,28 @@ Sovellus, jonka avulla käyttäjät voivat hallita muistiinpanojaan:
 - Yksikkötestaus: (jest / vitest) Yksittäisten komponenttien ja funktioiden testaus.
 - Päästä-päähän testaus: (Playwright) Koko sovelluksen toiminnallisuuden testaus käyttäjän näkökulmasta.
 - Kuormitustestaus: Sovelluksen suorituskyvyn testaus eri kuormitustilanteissa.
+
+## Testitapaukset
+
+**Muistiinpanojen hakeminen**
+
+Varmistetaan, että kutsu GET /notes palauttaa listan muistiinpanoista.
+Testataan, että lista sisältää oikean määrän muistiinpanoja.
+
+**Yksittäisen muistiinpanon hakeminen**
+
+Lisätään testi-dataa ja haetaan se GET /notes/:id-pyynnöllä.
+Varmistetaan, että haettu data vastaa odotettua.
+
+**Muistiinpanon luominen**
+
+Lähetetään POST /notes-pyyntö ja tarkistetaan, että vastaus sisältää luodun muistiinpanon oikeilla tiedoilla.
+
+**Muistiinpanon päivittäminen**
+
+Päivitetään muistiinpano PUT /notes/:id-pyynnöllä ja varmistetaan, että muistiinpano on päivittynyt oikein.
+
+**Muistiinpanon poistaminen**
+
+Poistetaan muistiinpano DELETE /notes/:id-pyynnöllä ja tarkistetaan, ettei sitä löydy enää tietokannasta.
 
