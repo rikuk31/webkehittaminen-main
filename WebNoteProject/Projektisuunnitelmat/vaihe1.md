@@ -217,6 +217,14 @@ Backend poistaa muistiinpanon id:n perusteella ja palauttaa vahvistuksen poistos
 
 ## Tietokanta ja tiedonhallinta
 Tietokanta tulee olemaan PostgreSQL-pohjainen. Tiedot tallennetaan Azuressa olevaan tietokantaan. Myös tietokannassa on käytössä IP-rajoitus, joka sallii tietoliikenteen vain sovelluslogiikan osoitteesta.
+### Tietokannan rakenne
+**Tietokanta sisältää yhden taulun nimeltä notes, joka tallentaa kaikki muistiinpanot. Jokaisella muistiinpanolla on:**
+
+- id (kokonaisluku, automaattisesti kasvava): Yksilöllinen tunniste jokaiselle muistiinpanolle. title (teksti): Muistiinpanon otsikko.
+- content (teksti): Muistiinpanon varsinainen sisältö.
+- is_favorite (boolean): Arvo, joka kertoo, onko muistiinpano merkitty suosikiksi (true) vai ei (false).
+- created_at (aikaleima): Ajankohta, jolloin muistiinpano luotiin.
+- updated_at (aikaleima): Viimeisin ajankohta, jolloin muistiinpanoa päivitettiin.
 # Projektinhallinta
 Projektin hallinta tapahtuu GitHubin avulla. Jokainen tiimin jäsen raportoi edistymisestään ja mahdollisista haasteista viikoittain. Koodin versionhallinta hoidetaan Gitin kautta, ja muutokset tarkistetaan pull requestien avulla ennen yhdistämistä päähaaraan. Kommunikointi hoidetaan pääasiassa GitHubin kommenttien ja erillisen viestintäkanavan kautta.
 ## Projektin tavoitteet
@@ -258,24 +266,19 @@ Sovellus, jonka avulla käyttäjät voivat hallita muistiinpanojaan:
 ## Testitapaukset
 
 **Muistiinpanojen hakeminen**
-
-Varmistetaan, että kutsu GET /notes palauttaa listan muistiinpanoista.
+- Varmistetaan, että kutsu GET /notes palauttaa listan muistiinpanoista.
 Testataan, että lista sisältää oikean määrän muistiinpanoja.
 
 **Yksittäisen muistiinpanon hakeminen**
-
-Lisätään testi-dataa ja haetaan se GET /notes/:id-pyynnöllä.
+- Lisätään testi-dataa ja haetaan se GET /notes/:id-pyynnöllä.
 Varmistetaan, että haettu data vastaa odotettua.
 
 **Muistiinpanon luominen**
-
-Lähetetään POST /notes-pyyntö ja tarkistetaan, että vastaus sisältää luodun muistiinpanon oikeilla tiedoilla.
+- Lähetetään POST /notes-pyyntö ja tarkistetaan, että vastaus sisältää luodun muistiinpanon oikeilla tiedoilla.
 
 **Muistiinpanon päivittäminen**
-
-Päivitetään muistiinpano PUT /notes/:id-pyynnöllä ja varmistetaan, että muistiinpano on päivittynyt oikein.
+- Päivitetään muistiinpano PUT /notes/:id-pyynnöllä ja varmistetaan, että muistiinpano on päivittynyt oikein.
 
 **Muistiinpanon poistaminen**
-
-Poistetaan muistiinpano DELETE /notes/:id-pyynnöllä ja tarkistetaan, ettei sitä löydy enää tietokannasta.
+- Poistetaan muistiinpano DELETE /notes/:id-pyynnöllä ja tarkistetaan, ettei sitä löydy enää tietokannasta.
 
