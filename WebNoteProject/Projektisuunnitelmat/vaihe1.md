@@ -63,10 +63,11 @@ Seurata asiakkaidensa edistymistä ja antaa heille muistiinpanot heidän harjoit
 
 **Käyttötapaus:**  
 
-1)	Käyttäjä painaa muistiinpanon luomisnäppäintä, joka avaa uuden näkymän.
-2)	Käyttäjä kirjoittaa muistiinpanolleen otsikon sekä kirjoittaa tekstiä vapaaseen teksti-kenttään haluamansa tiedot.
-3)	Käyttäjä painaa ”tallenna” näppäintä, jolloin muistiinpano tallentuu järjestelmään.
-4)	Tallennettu muistiinpano näkyy käyttäjän aloitussivulla, ja se on muokattavissa tai poistettavissa myöhemmin.
+1)	Käyttäjä avaa aloitussivun, jossa kaikki luodut muistiinpanot näkyvät.
+2)	Käyttäjä painaa muistiinpanon luomisnäppäintä, joka avaa uuden näkymän.
+3)	Käyttäjä kirjoittaa muistiinpanolle otsikon sekä haluamansa tiedot tekstikenttään.
+4)	Käyttäjä painaa ”tallenna” näppäintä, jolloin muistiinpano tallentuu järjestelmään.
+5)	Tallennettu muistiinpano näkyy käyttäjän aloitussivulla, ja se on muokattavissa tai poistettavissa myöhemmin.
 
 **Käyttötilanne:**
 
@@ -75,10 +76,11 @@ Seurata asiakkaidensa edistymistä ja antaa heille muistiinpanot heidän harjoit
 
 **Toimintakulku:** 
 
-1)	Emma avaa sovelluksen ja menee aloitussivulle, jossa näkyy aiemmin tallennetut muistiinpanot.
-2)	Hän painaa "Lisää muistiinpano" -painiketta ja avaa uuden näkymän.
-3)	Emma kirjoittaa otsikon, sisällön ja tallentaa muistiinpanon.
-4)	Sovellus tallentaa muistiinpanon ja näyttää sen aloitussivulla. Emma voi myöhemmin muokata tai poistaa sen.
+1)	Käyttäjä avaa aloitussivun, jossa kaikki luodut muistiinpanot näkyvät.
+2)	Käyttäjä avaa sovelluksen ja menee aloitussivulle, jossa näkyy aiemmin tallennetut muistiinpanot.
+3)	Käyttäjä painaa "Lisää muistiinpano" -painiketta ja avaa uuden näkymän.
+4)	Käyttäjä kirjoittaa otsikon, sisällön ja tallentaa muistiinpanon.
+5)	Sovellus tallentaa muistiinpanon ja näyttää sen aloitussivulla. Käyttäjä voi myöhemmin muokata tai poistaa sen.
 
 ## Muistiinpanon poistaminen
   	
@@ -95,18 +97,17 @@ Seurata asiakkaidensa edistymistä ja antaa heille muistiinpanot heidän harjoit
 **Käyttäjä:** Timo, 35, IT-alan työntekijä  
 **Konteksti:** Timo työskentelee ohjelmistokehittäjänä ja käyttää sovellusta hallitakseen työtehtäviään. Hän on lisännyt useita muistiinpanoja eri projekteihin, mutta haluaa poistaa vanhentuneen muistiinpanon, joka ei ole enää tarpeellinen.  
 **Toimintakulku:** 
-1)	Timo avaa sovelluksen selaimella ja menee aloitussivulle, jossa hän näkee kaikki luodut muistiinpanot.
-2)	Timo valitsee poistettavan muistiinpanon, joka avaa sen tarkemman näkymän.
-3)	Timo painaa "Poista" -painiketta, jolloin sovellus näyttää varmistusviestin, jossa kysy-tään, haluaako hän varmasti poistaa muistiinpanon.
-4)	Timo päättää poistaa muistiinpanon, joten hän painaa "Kyllä" vahvistaakseen pois-tamisen.
-5)	Sovellus poistaa muistiinpanon ja se ei enää näy Timon aloitussivulla. Timo jatkaa muiden muistiinpanojen hallintaa.
-4.3  Muistiinpanon hakeminen ja suodatus
+1)	Käyttäjä avaa aloitussivun, jossa kaikki luodut muistiinpanot näkyvät.
+2)	Käyttäjä valitsee poistettavan muistiinpanon, joka avaa sen tarkemman näkymän.
+3)	Käyttäjä painaa "Poista" -painiketta, jolloin sovellus näyttää varmistusviestin, jossa kysytään, haluaako hän varmasti poistaa muistiinpanon.
+4)	Käyttäjä päättää poistaa muistiinpanon, joten hän painaa "Kyllä" vahvistaakseen poistamisen.
+5)	Sovellus poistaa muistiinpanon ja se ei enää näy käyttäjän aloitussivulla. Käyttäjä jatkaa muiden muistiinpanojen hallintaa.
 
 ## Muistiinpanon hakeminen
   	
 **Käyttötapaus:**
 
-1)	Käyttäjä avaa aloitussivun, jossa kaikki muistiinpanot näkyvät.
+1)	Käyttäjä avaa aloitussivun, jossa kaikki luodut muistiinpanot näkyvät.
 2)	Käyttäjä kirjoittaa hakukenttään hakusanan, joka hakee sisältöä hakusanalla otsikon ja sisällön mukaan.
 3)	Sovellus näyttää hakutulokset.
 4)	Käyttäjä voi tarkentaa hakuaan, jos hakutulokset eivät ole riittävän tarkkoja.
@@ -119,17 +120,17 @@ Konteksti: Laura on henkilökohtainen valmentaja ja käyttää sovellusta asiakk
 
 **Toimintakulku:**
 
-1.	Laura avaa sovelluksen mobiililaitteella ja menee aloitussivulle, jossa näkyvät kaikki hänen luomansa muistiinpanot.
-2.	Hän kirjoittaa hakukenttään asiakkaan nimen, joka on mukana muistiinpanon otsikossa, joka rajaa hakutuloksia tietyille asiakkaille tehtyihin muistiinpanoihin.
+1.	Käyttäjä avaa aloitussivun, jossa kaikki luodut muistiinpanot näkyvät.
+2.	Käyttäjä kirjoittaa hakukenttään asiakkaan nimen, joka on mukana muistiinpanon otsikossa, joka rajaa hakutuloksia tietyille asiakkaille tehtyihin muistiinpanoihin.
 3.	Sovellus näyttää hakutulokset, jotka vastaavat kirjoitettua hakusanaa.
-4.	Laura tarkentaa hakuaan lisäämällä toisen hakusanan, jos hakutulokset eivät ole riittävän tarkkoja.
-5.	Laura valitsee haluamansa muistiinpanon hakutuloksista ja avaa sen tarkempaan näkymään, jossa hän voi lisätä lisätietoja asiakkaan harjoituksista.
+4.	Käyttäjä tarkentaa hakuaan lisäämällä toisen hakusanan, jos hakutulokset eivät ole riittävän tarkkoja.
+5.	Käyttäjä valitsee haluamansa muistiinpanon hakutuloksista ja avaa sen tarkempaan näkymään, jossa hän voi lisätä lisätietoja asiakkaan harjoituksista.
 
 ## Muistiinpanon muokkaus
 
 **Käyttötapaus:**  
 
-1)	Käyttäjä avaa aloitussivun, jossa kaikki muistiinpanot näkyvät.
+1)	Käyttäjä avaa aloitussivun, jossa kaikki luodut muistiinpanot näkyvät.
 2)	Käyttäjä painaa valitsemaansa muistiinpanoa, joka avaa muistiinpanon uuteen näkymään.
 3)	Käyttäjä voi muokata muistiinpanon otsikkoa ja sisältöä painamalla tekstiä.
 4)	Käyttäjä painaa "Tallenna" -painiketta, jolloin muokattu muistiinpano tallentuu ja näkyy päivitettynä aloitussivulla.
@@ -141,31 +142,31 @@ Konteksti: Anna on yrittäjä, joka käyttää sovellusta hallitakseen päivitt�
 
 **Toimintakulku:**  
 
-1.	Anna avaa sovelluksen tietokoneelta ja menee aloitussivulle, jossa kaikki hänen luomansa muistiinpanot näkyvät.
-2.	Hän valitsee muokattavan muistiinpanon ja painaa "Muokkaa" -painiketta, joka avaa muistiinpanon muokkausnäkymän.
-3.	Anna muokkaa muistiinpanon otsikkoa ja lisää asiakastietoja sekä lisää muistiinpanon suosikkeihin, jotta se erottuu paremmin muiden muistiinpanojen joukosta.
-4.	Hän painaa "Tallenna" -painiketta, jolloin muokattu muistiinpano tallentuu ja näkyy päivitettynä aloitussivulla.
-4.5  Muistiinpanon lisääminen suosikkeihin
+1)	Käyttäjä avaa aloitussivun, jossa kaikki luodut muistiinpanot näkyvät.
+2)	Käyttäjä valitsee muokattavan muistiinpanon ja painaa "Muokkaa" -painiketta, joka avaa muistiinpanon muokkausnäkymän.
+3)	Käyttäjä muokkaa muistiinpanon otsikkoa ja lisää asiakastietoja sekä lisää muistiinpanon suosikkeihin, jotta se erottuu paremmin muiden muistiinpanojen joukosta.
+4)	Käyttäjä painaa "Tallenna" -painiketta, jolloin muokattu muistiinpano tallentuu ja näkyy päivitettynä aloitussivulla.
 
 ## Muistiinpanon lisääminen suosikkeihin
 
 **Käyttötapaus:**  
 
-1)	Käyttäjä valitsee muistiinpanon aloitussivulta, jonka haluaa merkitä suosikiksi.
-2)	Käyttäjä painaa tähti -ikonia, joka lisää muistiinpanon suosikkeihin.
-3)	Sovellus vaihtaa tähti ikonin värin siniseksi muistiinpanon nimen vieressä aloitussi-vulla.
-4)	Sovellus on näkyvissä myös ”suosikit” -välilehdellä.
+1)	Käyttäjä avaa aloitussivun, jossa kaikki luodut muistiinpanot näkyvät.
+2)	Käyttäjä valitsee muistiinpanon aloitussivulta, jonka haluaa merkitä suosikiksi.
+3)	Käyttäjä painaa tähti -ikonia, joka lisää muistiinpanon suosikkeihin.
+4)	Sovellus vaihtaa tähti ikonin värin siniseksi muistiinpanon nimen vieressä aloitussi-vulla.
+5)	Sovellus on näkyvissä myös ”suosikit” -välilehdellä.
 
 **Käyttötilanne:**
 
 Käyttäjä: Anna, 28, Yrittäjä  
 Konteksti: Anna käyttää sovellusta hallitakseen tärkeimmät liiketoimintamuistiinpanot ja haluaa merkitä yhden tärkeistä asiakkaistaan koskevan muistiinpanon suosikiksi, jotta se on helposti saatavilla.  
 **Toimintakulku:**  
-1.	Anna avaa sovelluksen tietokoneelta ja menee aloitussivulle, jossa kaikki hänen luomansa muistiinpanot näkyvät.
-2.	Hän valitsee tärkeän asiakasmuistiinpanon, jonka haluaa merkitä suosikiksi.
-3.	Anna painaa tähti-ikonia, joka lisää muistiinpanon suosikkeihin.
-4.	Sovellus vaihtaa tähti-ikonin värin siniseksi muistiinpanon nimen vieressä aloitussi-vulla.
-5.	Sovellus lisää muistiinpanon "Suosikit"-välilehdelle, jolloin Anna voi nopeasti löytää ja tarkistaa sen myöhemmin.
+1.	Käyttäjä avaa aloitussivun, jossa kaikki luodut muistiinpanot näkyvät.
+2.	Käyttäjä valitsee tärkeän asiakasmuistiinpanon, jonka haluaa merkitä suosikiksi.
+3.	Käyttäjä painaa tähti-ikonia, joka lisää muistiinpanon suosikkeihin.
+4.	Sovellus vaihtaa tähti-ikonin värin siniseksi muistiinpanon nimen vieressä aloitussivulla.
+5.	Sovellus lisää muistiinpanon "Suosikit"-välilehdelle, jolloin käyttäjä voi nopeasti löytää ja tarkistaa sen myöhemmin.
 
 # Käyttöliittymän prototyypit
 
