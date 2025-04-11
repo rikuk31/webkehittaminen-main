@@ -36,9 +36,9 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_HAPPY_GLACIER_01E303403 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "webkehittaminen-main/WebNoteProject/app/frontend"  # This is the location of your frontend source code
-          api_location: "webkehittaminen-main/WebNoteProject/app/backend"  # Keep this as is if you have a backend, otherwise set to ""
-          output_location: "webkehittaminen-main/WebNoteProject/app/frontend/build"  # The output directory after build
+          app_location: "WebNoteProject/app/frontend"  # This is the location of your frontend source code
+          api_location: "WebNoteProject/app/backend"  # Keep this as is if you have a backend, otherwise set to ""
+          output_location: "WebNoteProject/app/frontend/build"  # The output directory after build
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
