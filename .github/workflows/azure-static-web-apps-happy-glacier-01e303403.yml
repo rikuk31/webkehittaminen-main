@@ -43,4 +43,4 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_HAPPY_GLACIER_01E303403 }}
           action: "close"
-          app_location: ""  # Required empty field for "close" action
+          app_location: "./WebNoteProject/app/frontend"  # Required empty field for "close" action
