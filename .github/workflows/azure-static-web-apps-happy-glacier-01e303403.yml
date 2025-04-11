@@ -28,8 +28,8 @@ jobs:
           action: "upload"
           app_location: "./WebNoteProject/app/frontend"
           api_location: "./WebNoteProject/app/backend"
-          output_location: "build"
-          app_build_command: "npm install && npm run build"
+          app_artifact_location: "./WebNoteProject/app/frontend/dist"  # Corrected this location
+          app_build_command: "npm install && npm run build"  # Ensure correct build command
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
@@ -42,4 +42,4 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_HAPPY_GLACIER_01E303403 }}
           action: "close"
-          app_location: ""
+          app_location: ""  # Required empty field for "close" action
