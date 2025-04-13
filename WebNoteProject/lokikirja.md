@@ -9,3 +9,5 @@
 | 26.3.2025 | 2t | Ensimmäisen vaiheen suunnittelua |  Projektisuunnitelman viimeistelyä ja tyylitystä |
 | 27.3.2025 | 1t | Ensimmäisen vaiheen suunnittelua |  Kehitysideoiden miettimistä ja kirjaamista |
 | 1.4.2025 | 2t | Ensimmäisen vaiheen suunnittelua |  Tietokannan rakenteen ja testitapauksien lisääminen sekä käyttötapausten yhtenäistämistä |
+| 11.4.2025 | 6t | Toisen vaiheen toteutusta |  Tietokannan rakentaminen ja rungon aloitus |
+| 13.4.2025 | 8t | Toisen vaiheen toteutusta |  Rungon rakentamista |
