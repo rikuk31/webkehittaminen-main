@@ -12,3 +12,4 @@
 | 11.4.2025 | 6t | Toisen vaiheen toteutusta |  Tietokannan rakentaminen ja rungon aloitus |
 | 13.4.2025 | 10t | Toisen vaiheen toteutusta |  Rungon rakentamista |
 | 14.4.2025 | 2t | Toisen vaiheen toteutusta |  Rungon rakentamista |
+| 15.4.2025 | 3t | Toisen vaiheen toteutusta |  Testauksen toteutusta ja koodin dokumentointia |
