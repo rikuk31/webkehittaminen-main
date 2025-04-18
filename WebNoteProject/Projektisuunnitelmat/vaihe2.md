@@ -1,6 +1,6 @@
 # Projekti vaihe 2 - Perus rakenne ja pää-toimninnallisuudet
 
-Add something
+Web-pohjaisen muistiinpanosovelluksen dokumentaatio.
 
 ## 1. Ympäristö
 
@@ -8,15 +8,16 @@ Add something
 
 ## 2. Sovelluslogiikka
 
-Add something
+Sovelluslogiikka eli backend toteuttiin Expressillä.
 
 ## 3. Käyttöliittymä
 
-Add something
+Käyttöliittymä toteutettiin Reactilla ja siinä pyrittiin pitämään käytettävyys minimalistisena ja selkeänä.
 
 ## 4. Tietokanta
-
-Add something
+Tietokanta toteuttiin käyttämällä Postgres-tietokantaa. Tietokanta asennettiin virtuaalikoneelle ja siinä on seuraavanlainen taulukko sekä trigger toiminto. Trigger toiminto päivittää muokkaus ajan muistiinpanoon kun sitä on muokattu.
+![tietokanta](https://github.com/user-attachments/assets/1ed2eabd-3946-43ee-8af6-4ecd4e5f7ccf)
+Created_at ja updated_at sarakkeet ovat sovelluskehitystä varten ja niitä voi myös hyödyntää sovelluksen jatkokehittämisen kannalta.
 
 ## 5. Arkkitehtuuri
 
