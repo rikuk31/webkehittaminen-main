@@ -52,16 +52,17 @@ Tietokanta toteuttiin käyttämällä Postgres-tietokantaa. Tietokanta asennetti
 
 Sovellus noudattaa komponenttipohjaista rakennetta. Kansiorakenne:
 
-app/
-├── backend/          # Node.js + Express -pohjainen API ja tietokantayhteys
-├── frontend/         # React-sovellus
-│   ├── public/       # Staattiset tiedostot
-│   └── src/
-│       ├── components/    # React-komponentit (NoteForm, NoteList, NoteItem...)
-│       ├── services/      # Axios-kutsut backendille (noteService.js)
-│       ├── tests/         # Yksikkötestit komponenttien toiminnalle
-│       └── App.jsx        # Sovelluksen pääkomponentti
-└── package.json      # Projektin riippuvuudet ja skriptit
+app/&nbsp; ├── backend/&nbsp;          # Node.js + Express -pohjainen API ja tietokantayhteys  
+app/&nbsp; ├── frontend/&nbsp;         # React-sovellus  
+app/&nbsp; │   ├── public/&nbsp;      # Staattiset tiedostot  
+app/&nbsp; │   └── src/&nbsp;  
+app/&nbsp; │       ├── components/&nbsp;    # React-komponentit (NoteForm, NoteList, NoteItem...)  
+app/&nbsp; │       ├── services/&nbsp;      # Axios-kutsut backendille (noteService.js)  
+app/&nbsp; │       ├── tests/&nbsp;         # Yksikkötestit komponenttien toiminnalle  
+app/&nbsp; │       └── App.jsx/&nbsp;        # Sovelluksen pääkomponentti  
+app/&nbsp; └── package.json/&nbsp;      # Projektin riippuvuudet ja skriptit
+
+
 
 
 ## 6. Toiminnallisuudet
