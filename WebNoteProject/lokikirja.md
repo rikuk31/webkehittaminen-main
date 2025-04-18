@@ -10,8 +10,10 @@
 | 27.3.2025 | 1t | Ensimmäisen vaiheen suunnittelua |  Kehitysideoiden miettimistä ja kirjaamista |
 | 1.4.2025 | 2t | Ensimmäisen vaiheen suunnittelua |  Tietokannan rakenteen ja testitapauksien lisääminen sekä käyttötapausten yhtenäistämistä |
 | 11.4.2025 | 6t | Toisen vaiheen toteutusta |  Tietokannan rakentaminen ja rungon aloitus |
+| 12.4.2025 | 7t | Toisen vaiheen toteutusta |  Backendin toteutusta |
 | 13.4.2025 | 10t | Toisen vaiheen toteutusta |  Backendin ja frontendin toteutusta |
 | 14.4.2025 | 2t | Toisen vaiheen toteutusta |  Backendin ja frontendin toteutusta |
 | 15.4.2025 | 3t | Toisen vaiheen toteutusta |  Testauksen toteutusta ja koodin dokumentointia |
-| 16.4.2025 | 5t | Toisen vaiheen toteutusta |  Koodin viimeistelyä |
+| 16.4.2025 | 6t | Toisen vaiheen toteutusta |  Testauksen toteutusta ja koodin dokumentointia |
+| 17.4.2025 | 8t | Toisen vaiheen toteutusta |  Koodin viimeistelyä |
 | 18.4.2025 | 4t | Toisen vaiheen toteutusta |  Projektin dokumentointia |
