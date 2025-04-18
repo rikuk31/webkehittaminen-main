@@ -1,0 +1,208 @@
+/* Yleiset tyylit keholle */
+body {
+  font-family: Arial, sans-serif; /* Määrittää fontin koko sivustolle */
+  background-color: #f4f4f4; /* Taustaväri vaaleanharmaa */
+  margin: 0; /* Poistaa oletusmarginaalit */
+  padding: 0; /* Poistaa oletuspaddingit */
+  overflow-x: hidden; /* Estää vaakasuuntaisen vierityksen */
+  font-size: 16px; /* Määrittää perusfonttikoon */
+}
+
+/* Säilötyylit, joka rajoittaa leveyttä ja lisää marginaalit */
+.container {
+  max-width: 100%; /* Säilön leveys on 100% näytöstä */
+  margin: 0 auto; /* Keskittää säilön */
+  padding: 20px; /* Lisää sisäistä marginaalia */
+  width: 100%; /* Täyttää koko tilan */
+  box-sizing: border-box; /* Sisällyttää paddingin ja borderin elementin kokoon */
+}
+
+/* Yläosan rivin tyylit */
+.top-bar {
+  display: flex; /* Käytetään joustavaa asettelua */
+  justify-content: space-between; /* Jaa tilaa tasaisesti vasemman ja oikean osan välillä */
+  align-items: center; /* Kohdistaa sisällön pystysuunnassa */
+  padding: 10px 20px; /* Sisäistä marginaalia */
+  margin-bottom: 20px; /* Lisää tilaa alapuolelle */
+  margin-top: 50px; /* Siirtää yläosan alemmaksi */
+  flex-wrap: wrap; /* Mahdollistaa elementtien rivittymisen, jos tila on rajallinen */
+  min-width: 500px; /* Varmistaa, että yläosa ei mene liian pieneksi */
+  gap: 10px; /* Lisää tilaa elementtien väliin */
+  position: sticky; /* Yläosa pysyy näkyvissä skrollatessa */
+  top: 0; /* Pysyy kiinni ylhäällä */
+  z-index: 10; /* Varmistaa, ettei yläosa mene muiden elementtien päälle */
+}
+
+/* Vasemmanpuoleisen osan tyylit yläosassa */
+.top-bar .left {
+  display: flex; /* Käytetään joustavaa asettelua */
+  align-items: center; /* Kohdistaa sisällön pystysuunnassa */
+}
+
+/* Otsikon tyylit yläosassa */
+.top-bar h1 {
+  margin: 0; /* Poistaa marginaalit */
+  font-size: 24px; /* Määrittää otsikon koon */
+}
+
+/* Yläosan napit */
+.top-bar a {
+  background-color: #007bff; /* Taustaväri modaalille */
+  color: white; /* Tekstiväri valkoinen */
+  text-decoration: none; /* Poistaa linkin alaviivan */
+  border-radius: 5px; /* Pyöristää kulmat */
+  font-size: 16px; /* Määrittää fonttikoon */
+}
+
+.top-bar a:hover {
+  background-color: #0056b3; /* Tummemman sininen hover-tilassa */
+}
+
+/* Yksittäinen muistiinpanokortti */
+.note-card {
+  background-color: white; /* Taustaväri valkoinen */
+  border-radius: 10px; /* Pyöristää kulmat */
+  padding: 20px; /* Sisäiset marginaalit */
+  position: relative; /* Positioidaan suhteessa ympäröivään elementtiin */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Varjo kortin ympärille */
+  transition: transform 0.2s; /* Sujuva animaatio muodon muuttamiseen */
+}
+
+.note-card:hover {
+  transform: translateY(-5px); /* Liikuttaa korttia hieman ylöspäin hover-tilassa */
+  border: 2px solid #007bff; /* Lisää sinisen reunan hover-tilassa */
+  cursor: pointer; /* Muuttaa kursoria osoittimeksi */
+}
+
+/* Tähti oikeassa yläkulmassa, suosikkikortti */
+.note-card .favorite {
+  position: absolute; /* Asettaa tähden oikeaan yläkulmaan */
+  top: 0px;
+  right: 10px;
+  font-size: 24px; /* Määrittää tähden koon */
+  color: #ffae00; /* Väri kultainen */
+  background: none; /* Ei taustaväriä */
+  border: none; /* Ei reunaa */
+  cursor: pointer; /* Kursori muuttuu osoittimeksi */
+  transition: color 0.3s; /* Sujuva väri-animaatio */
+}
+
+.note-card .favorite:hover {
+  color: #999; /* Muuttaa värin harmaaksi hover-tilassa */
+}
+
+.note-card .favorite.active {
+  color: gold; /* Kun kortti on suosikkina, se on kultainen */
+}
+
+/* Hakukenttä */
+.search {
+  margin-bottom: 20px; /* Lisää tilaa alapuolelle */
+  padding: 10px; /* Sisäistä marginaalia hakukentälle */
+  width: 100%; /* Leveys 100% */
+  border: 1px solid #ccc; /* Vaalea reuna */
+  border-radius: 5px; /* Pyöristää kulmat */
+  font-size: 16px; /* Määrittää fonttikoon */
+}
+
+/* Napit ja linkit */
+.favorite-btn {
+  background-color: #007bff; /* Sininen taustaväri */
+  color: white; /* Valkoinen teksti */
+  padding: 10px 20px; /* Sisäistä marginaalia */
+  text-decoration: none; /* Poistaa alaviivan */
+  border-radius: 5px; /* Pyöristää kulmat */
+}
+
+.favorite-btn:hover {
+  background-color: #0056b3; /* Tummemman sininen hover-tilassa */
+}
+
+.add-note-btn {
+  background-color: #28a745; /* Vihreä taustaväri */
+  color: white; /* Valkoinen teksti */
+  padding: 10px 20px; /* Sisäistä marginaalia */
+  text-decoration: none; /* Poistaa alaviivan */
+  border-radius: 5px; /* Pyöristää kulmat */
+}
+
+.add-note-btn:hover {
+  background-color: #218838; /* Tummempi vihreä hover-tilassa */
+}
+
+/* Button group ja hakukenttä tyylit */
+.search-bar {
+  margin-bottom: 1rem; /* Lisää tilaa alapuolelle */
+}
+
+.button-group {
+  display: flex; /* Käytetään joustavaa asettelua */
+  gap: 0.5rem; /* Lisää tilaa nappien väliin */
+  margin-top: 1rem; /* Lisää tilaa ylhäältä */
+}
+
+/* Poistonappi */
+.delete {
+  background-color: red; /* Punainen taustaväri */
+  color: white; /* Valkoinen teksti */
+  padding: 0.5rem 1rem; /* Sisäistä marginaalia */
+  border-radius: 5px; /* Pyöristää kulmat */
+  border: none; /* Ei reunaa */
+}
+
+.delete:hover {
+  background-color: #c82333; /* Tummempi punainen hover-tilassa */
+}
+
+/* Muistiinpanokorttien grid */
+.note-grid {
+  display: flex; /* Käytetään joustavaa asettelua */
+  flex-wrap: wrap; /* Mahdollistaa rivittymisen */
+  gap: 1rem; /* Lisää tilaa korttien väliin */
+  overflow-y: auto; /* Mahdollistaa pystysuoran vierityksen */
+  max-height: 70vh; /* Rajaa gridin korkeuden */
+  padding-top: 20px; /* Lisää tilaa ylhäältä */
+}
+
+/* Yksittäinen muistiinpanokortti */
+.note-card {
+  position: relative; /* Positioidaan suhteessa ympäröivään elementtiin */
+  background: #f5f5f5; /* Taustaväri vaaleanharmaa */
+  padding: 1rem; /* Sisäistä marginaalia */
+  border-radius: 8px; /* Pyöristää kulmat */
+  width: 250px; /* Määrittää kortin leveyden */
+}
+
+/* Tähti oikeassa yläkulmassa */
+.favorite {
+  position: absolute; /* Asettaa tähden oikeaan yläkulmaan */
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none; /* Ei taustaväriä */
+  border: none; /* Ei reunaa */
+  font-size: 1.5rem; /* Määrittää tähden koon */
+  cursor: pointer; /* Kursori muuttuu osoittimeksi */
+}
+
+.favorite:hover {
+  color: #999; /* Harmaa väri hover-tilassa */
+}
+
+/* Muistiinpanon otsikon tyylit */
+.title {
+  margin: 10; /* Lisää marginaalia ympärille */
+  font-size: 2.5rem; /* Otsikon koko */
+  font-weight: bold; /* Tekstin lihavointi */
+  text-align: center; /* Keskittää otsikon */
+  width: 100%; /* Täyttää koko leveys */
+}
+
+/* Muistiinpanon otsikon alityylit */
+.note-card .title {
+  font-size: 1.2rem; /* Otsikon koko muistiinpanokortissa */
+  font-weight: bold; /* Tekstin lihavointi */
+  text-align: left; /* Vasemmalle tasattu */
+  width: 80%; /* Leveys 80% */
+  word-wrap: break-word; /* Teksti menee seuraavalle riville, jos se ei mahdu */
+  hyphens: auto; /* Mahdollistaa sanan katkaisemisen, jos se on liian pitkä */
+}

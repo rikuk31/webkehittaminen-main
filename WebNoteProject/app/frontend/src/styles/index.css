@@ -1,0 +1,69 @@
+/* Resetoi marginaalit ja täytteet kaikilta elementeiltä, jotta tyylit eivät häiritse */
+* {
+  margin: 0; /* Poistaa oletusmarginaalit */
+  padding: 0; /* Poistaa oletuspaddingit */
+  box-sizing: border-box; /* Sisällyttää paddingin ja borderin elementin kokoon */
+}
+
+/* Perus fontti ja taustaväri sivustolle */
+body {
+  font-family: Arial, sans-serif; /* Määrittää perusfontin */
+  background-color: #f4f4f9; /* Vaaleanharmaa taustaväri */
+  color: #333; /* Tummanharmaa tekstiväri */
+}
+
+/* Keskittää sisältö koko näytölle */
+html, body, #root {
+  height: 100%; /* Varmistaa, että kaikki elementit täyttävät koko korkeuden */
+  display: flex; /* Käytetään joustavaa asettelua */
+  justify-content: center; /* Keskittää sisällön vaaka-akselilla */
+  align-items: center; /* Keskittää sisällön pystysuunnassa */
+  padding: 20px; /* Lisää hieman sisäistä marginaalia */
+}
+
+/* Otsikon tyylit */
+h1 {
+  color: #333; /* Tummanharmaa väri otsikolle */
+  margin-bottom: 20px; /* Lisää tilaa otsikon alle */
+  text-align: center; /* Keskittää otsikon */
+}
+
+/* Linkkien ja painikkeiden tyylit */
+a {
+  text-decoration: none; /* Poistaa linkin alaviivan */
+  color: inherit; /* Säilyttää linkin tekstivärin alkuperäisen */
+}
+
+a:hover {
+  text-decoration: underline; /* Alaviiva linkille hover-tilassa */
+}
+
+/* Yleiset sääntöjä painikkeille */
+button {
+  padding: 10px 20px; /* Lisää sisäistä marginaalia painikkeelle */
+  font-size: 16px; /* Määrittää fonttikoon */
+  cursor: pointer; /* Muuttaa kursorin osoittimeksi */
+  border: none; /* Poistaa reunan */
+  background-color: #007bff; /* Sininen taustaväri */
+  color: white; /* Valkoinen teksti */
+  border-radius: 5px; /* Pyöristää kulmat */
+}
+
+button:hover {
+  background-color: #0056b3; /* Tummemman sininen hover-tilassa */
+}
+
+/* Kentät (input ja textarea) */
+input, textarea {
+  padding: 10px; /* Lisää sisäistä marginaalia kentille */
+  font-size: 16px; /* Määrittää fonttikoon */
+  border: 1px solid #ccc; /* Vaalea reuna kentille */
+  border-radius: 5px; /* Pyöristää kulmat */
+  width: 100%; /* Kenttä täyttää koko tilan */
+  box-sizing: border-box; /* Sisällyttää paddingin ja borderin kentän kokoon */
+}
+
+/* Muokkaa textarea-elementin korkeutta */
+textarea {
+  height: 150px; /* Määrittää textarea-elementille korkeuden */
+}
