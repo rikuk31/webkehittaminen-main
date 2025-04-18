@@ -13,3 +13,5 @@
 | 13.4.2025 | 10t | Toisen vaiheen toteutusta |  Backendin ja frontendin toteutusta |
 | 14.4.2025 | 2t | Toisen vaiheen toteutusta |  Backendin ja frontendin toteutusta |
 | 15.4.2025 | 3t | Toisen vaiheen toteutusta |  Testauksen toteutusta ja koodin dokumentointia |
+| 16.4.2025 | 5t | Toisen vaiheen toteutusta |  Koodin viimeistelyä |
+| 18.4.2025 | 4t | Toisen vaiheen toteutusta |  Projektin dokumentointia |
