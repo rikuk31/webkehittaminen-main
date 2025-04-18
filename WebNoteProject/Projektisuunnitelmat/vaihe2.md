@@ -1,4 +1,4 @@
-# Projekti vaihe 2 - Perus rakenne ja pää-toimninnallisuudet
+# Projekti vaihe 2 - Perus rakenne ja pää-toiminnallisuudet
 
 WebNoteProject on Node.js:llä ja Expressillä toteutettu RESTful-sovellus, joka mahdollistaa muistiinpanojen hallinnan. Sovellus tarjoaa seuraavat toiminnot:​
 - Muistiinpanojen luonti
