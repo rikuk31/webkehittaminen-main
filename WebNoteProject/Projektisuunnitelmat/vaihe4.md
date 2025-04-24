@@ -65,6 +65,7 @@ Projektissa onnistuttiin erityisesti komponenttipohjaisessa rakenteessa ja yksin
 | 17.4.2025 | 8t | Toisen vaiheen toteutusta |  Koodin viimeistelyä |
 | 18.4.2025 | 4t | Toisen vaiheen toteutusta |  Projektin dokumentointia |
 | 24.4.2025 | 2t | Neljännen vaiheen toteutusta |  Esittelyn luonti |
+| **Yhteensä** | **64t** |  |  |
 
 ---
 
