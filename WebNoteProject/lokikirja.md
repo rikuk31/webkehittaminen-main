@@ -17,3 +17,4 @@
 | 16.4.2025 | 6t | Toisen vaiheen toteutusta |  Testauksen toteutusta ja koodin dokumentointia |
 | 17.4.2025 | 8t | Toisen vaiheen toteutusta |  Koodin viimeistelyä |
 | 18.4.2025 | 4t | Toisen vaiheen toteutusta |  Projektin dokumentointia |
+| 24.4.2025 | 2t | Neljännen vaiheen toteutusta |  Esittelyn luonti |
