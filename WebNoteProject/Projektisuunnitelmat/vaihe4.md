@@ -8,7 +8,7 @@
 
 ## 📝 Projektin yleiskuvaus
 
-WebNoteProject on selainpohjainen muistiinpanosovellus, jonka avulla käyttäjät voivat luoda, muokata, hakea ja hallita muistiinpanojaan. Sovellus on suunnattu opiskelijoille ja työelämän ammattilaisille, jotka haluavat yksinkertaisen ja selkeän tavan jäsentää ajatuksiaan. Sovellus toimii saumattomasti eri laitteilla ja tarjoaa myös mahdollisuuden merkitä muistiinpanoja suosikeiksi.
+WebNoteProject on selainpohjainen muistiinpanosovellus, jonka avulla käyttäjä voi luoda, muokata, poistaa ja etsiä muistiinpanoja sekä merkitä ne suosikeiksi. Sovellus on suunnattu erityisesti opiskelijoille ja tietotyöläisille, jotka tarvitsevat selkeän ja helppokäyttöisen tavan jäsentää ajatuksiaan. Sovellus toimii responsiivisesti eri laitteilla, ja se toteutettiin Web-ohjelmointi-kurssin projektityönä.
 
 ---
 
@@ -35,13 +35,13 @@ Sovelluksen frontend on toteutettu Reactilla ja Vite-kehitysympäristöllä. Bac
 
 ## 🚂 Kehitysprosessi
 
-Projekti aloitettiin huolellisella suunnittelulla, jossa määriteltiin käyttötapaukset ja keskeiset ominaisuudet. Ensimmäisenä toteutettiin muistiinpanojen luonti ja listaaminen. Tämän jälkeen lisättiin muokkaus-, haku- ja suosikkitoiminnot. Kehityksen aikana arkkitehtuuria refaktoroitiin useaan otteeseen komponenttien selkeyttämiseksi. Frontendin ja backendin välistä tiedonsiirtoa paranneltiin lisäämällä virheenkäsittely sekä selkeä JSON-pohjainen viestintä.
+Projektin alussa määriteltiin selkeät käyttötapaukset ja suunniteltiin toteutusvaiheet vaiheittain. Ensimmäiseksi rakennettiin perustoteutus muistiinpanojen luonnille ja listaukselle. Tämän jälkeen lisättiin hakutoiminto ja suosikkimerkinnät. Projektin keskivaiheilla refaktoroitiin frontendin rakennetta ja kehitettiin komponenttien uudelleenkäytettävyyttä. Loppuvaiheessa panostettiin testaukseen ja virheenkäsittelyyn backendissä.
 
 ---
 
 ## ☀️ Reflektio ja jatkokehitys
 
-Projektissa onnistuttiin erityisesti komponenttipohjaisessa rakenteessa ja yksinkertaisessa käyttöliittymässä. Suurimmat haasteet liittyivät testauksen ja virheenkäsittelyn yhteensovittamiseen backendissä. Jatkossa voisi kehittää käyttäjätunnistuksen (kirjautuminen), lisätä muistiinpanojen luokittelun ja synkronoinnin eri laitteiden välillä sekä kehittää mobiiliystävällisyyttä entisestään lisäksi palvelut voisi siirtää pilveen paikalliselta virtuaalikoneelta.
+Projektissa onnistuttiin erityisesti komponenttipohjaisessa rakenteessa ja yksinkertaisessa käyttöliittymässä. Suurimmat haasteet liittyivät testauksen ja virheenkäsittelyn yhteensovittamiseen backendissä. Jatkossa voisi kehittää käyttäjätunnistuksen (kirjautuminen), lisätä muistiinpanojen luokittelun ja synkronoinnin eri laitteiden välillä sekä kehittää mobiiliystävällisyyttä entisestään. Lisäksi palvelut voisi siirtää pilveen paikalliselta virtuaalikoneelta.
 
 ---
 
