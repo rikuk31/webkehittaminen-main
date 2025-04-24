@@ -1,66 +1,73 @@
-# Phase 4 – Project Presentation
+# Phase 4 – Projektin esittely
 
-> [!NOTE]  
-> Think of this as presenting your project, which you can include in your job application. The presentation should be clear and concise. Explain the entire project. Don't be afraid to highlight failures, as everyone has experienced them at some point. Consider that the viewer may not have a strong technical background.  
->   
-> **You can do this entire presentation in English or Finnish.**
+## 🎯 Projektin nimi
 
-## 🎯 Project title
-
-_Give your project a descriptive and informative title._
+**WebNoteProject – Responsiivinen muistiinpanosovellus Reactilla**
 
 ---
 
-## 📝 Project overview
+## 📝 Projektin yleiskuvaus
 
-_Briefly describe the project’s purpose, its target users, and its context._
-
----
-
-## 📌 Use case summary
-
-_Link to the use cases defined in Phase 1._
-
-| Use Case | Implemented (Yes/No) | Demonstration / Notes |
-|----------|----------------------|------------------------|
-| Example: User logs in and makes a reservation | Yes | Implemented using secure session handling. Demo at 2:45 in the video. |
-| Example: Admin deletes resources | No | Not prioritized, possible future work. |
-
-_Add explanations for each use case, including demo timestamps if using video._
+WebNoteProject on selainpohjainen muistiinpanosovellus, jonka avulla käyttäjät voivat luoda, muokata, hakea ja hallita muistiinpanojaan. Sovellus on suunnattu opiskelijoille ja työelämän ammattilaisille, jotka haluavat yksinkertaisen ja selkeän tavan jäsentää ajatuksiaan. Sovellus toimii saumattomasti eri laitteilla ja tarjoaa myös mahdollisuuden merkitä muistiinpanoja suosikeiksi.
 
 ---
 
-## ✍️ Technical implementation
+## 📌 Käyttötapausten yhteenveto
 
-_Describe technologies used, architectural decisions, and how key features were implemented._
+Linkki vaiheen 1 käyttötapauksiin: [Vaihe 1 - käyttötapaukset](https://github.com/rikuk31/webkehittaminen-main/blob/master/WebNoteProject/Projektisuunnitelmat/vaihe1.md)
 
----
-
-## 🚂 Development process
-
-_Summarize your progress from start to finish, mentioning key decisions or changes along the way._
-
----
-
-## ☀️ Reflection and future work
-
-_What worked well? What challenges did you face? What would you add or improve in the future?_
+| Käyttötapaus                                     | Toteutettu (K/E) | 
+|--------------------------------------------------|------------------|
+| Käyttäjä luo muistiinpanon                        | Kyllä            |
+| Käyttäjä muokkaa olemassa olevaa muistiinpanoa   | Kyllä            |
+| Käyttäjä poistaa muistiinpanon                   | Kyllä            |
+| Käyttäjä hakee muistiinpanoja                     | Kyllä            |
+| Käyttäjä merkitsee muistiinpanon suosikiksi       | Kyllä            |
+| Käyttäjä tarkastelee suosikkimuistiinpanoja       | Kyllä            |
 
 ---
 
-## 📊 Work Hours Log
+## ✍️ Tekninen toteutus
 
-_You can copy from the logbook here._
-
-| Date       | Time | Task                                |
-|------------|------|-------------------------------------|
-| 2.4.2025   | 3h   | Defined use cases                   |
-| 4.4.2025   | 2h   | Built login form                    |
-| ...        | ...  | ...                                 |
-| **Total**  | **63h** |                                 |
+Sovelluksen frontend on toteutettu Reactilla ja Vite-kehitysympäristöllä. Backend on Node.js:llä rakennettu REST API, joka hyödyntää Expressiä. Tietokantana toimii PostgreSQL, ja tietokantayhteys hoidetaan `pg`-kirjastolla. Frontend ja backend kommunikoivat JSON-rajapinnan avulla. Sovellus on jaettu komponenttipohjaiseen arkkitehtuuriin, ja se on testattu Vitest- ja Playwright-testikirjastoilla. Backend, frontend ja tietokantanta pyörivät paikallisella virtuaalipalvelimella.
 
 ---
 
-## 🪢 Presentation link
+## 🚂 Kehitysprosessi
 
-_Add a link to your video presentation or state that it was presented live._
+Projekti aloitettiin huolellisella suunnittelulla, jossa määriteltiin käyttötapaukset ja keskeiset ominaisuudet. Ensimmäisenä toteutettiin muistiinpanojen luonti ja listaaminen. Tämän jälkeen lisättiin muokkaus-, haku- ja suosikkitoiminnot. Kehityksen aikana arkkitehtuuria refaktoroitiin useaan otteeseen komponenttien selkeyttämiseksi. Frontendin ja backendin välistä tiedonsiirtoa paranneltiin lisäämällä virheenkäsittely sekä selkeä JSON-pohjainen viestintä.
+
+---
+
+## ☀️ Reflektio ja jatkokehitys
+
+Projektissa onnistuttiin erityisesti komponenttipohjaisessa rakenteessa ja yksinkertaisessa käyttöliittymässä. Suurimmat haasteet liittyivät testauksen ja virheenkäsittelyn yhteensovittamiseen backendissä. Jatkossa voisi kehittää käyttäjätunnistuksen (kirjautuminen), lisätä muistiinpanojen luokittelun ja synkronoinnin eri laitteiden välillä sekä kehittää mobiiliystävällisyyttä entisestään lisäksi palvelut voisi siirtää pilveen paikalliselta virtuaalikoneelta.
+
+---
+
+## 📊 Työtuntikirjanpito
+
+| Päivämäärä  | Käytetty aika | Aihe |  Lopputulos |
+| :---  |     :---:      |     :---:      |     :---:      |
+| 23.3.2025 | 4t | Ensimmäisen vaiheen suunnittelua ja ohjelmistosuunnitelman laatimista |  Käyttäjäpersoonien, käyttötapauksien- ja tilanteiden laatiminen |
+| 23.3.2025 | 3t | Ensimmäisen vaiheen suunnittelua ja ohjelmistosuunnitelman laatimista |  Tietoarkkitehtuurin, teknisen suunnittelun, projektinhallinnan ja käyttäjätestauksen laatiminen |
+| 24.3.2025 | 3t | Ensimmäisen vaiheen suunnittelua |  Prototyyppien laatiminen |
+| 25.3.2025 | 1t | Ensimmäisen vaiheen suunnittelua | Protyyppien lisääminen projektisuunnitelmaan ja tyylistystä  |
+| 26.3.2025 | 2t | Ensimmäisen vaiheen suunnittelua |  Projektisuunnitelman viimeistelyä ja tyylitystä |
+| 27.3.2025 | 1t | Ensimmäisen vaiheen suunnittelua |  Kehitysideoiden miettimistä ja kirjaamista |
+| 1.4.2025 | 2t | Ensimmäisen vaiheen suunnittelua |  Tietokannan rakenteen ja testitapauksien lisääminen sekä käyttötapausten yhtenäistämistä |
+| 11.4.2025 | 6t | Toisen vaiheen toteutusta |  Tietokannan rakentaminen ja rungon aloitus |
+| 12.4.2025 | 7t | Toisen vaiheen toteutusta |  Backendin toteutusta |
+| 13.4.2025 | 10t | Toisen vaiheen toteutusta |  Backendin ja frontendin toteutusta |
+| 14.4.2025 | 2t | Toisen vaiheen toteutusta |  Backendin ja frontendin toteutusta |
+| 15.4.2025 | 3t | Toisen vaiheen toteutusta |  Testauksen toteutusta ja koodin dokumentointia |
+| 16.4.2025 | 6t | Toisen vaiheen toteutusta |  Testauksen toteutusta ja koodin dokumentointia |
+| 17.4.2025 | 8t | Toisen vaiheen toteutusta |  Koodin viimeistelyä |
+| 18.4.2025 | 4t | Toisen vaiheen toteutusta |  Projektin dokumentointia |
+| 24.4.2025 | 2t | Neljännen vaiheen toteutusta |  Esittelyn luonti |
+
+---
+
+## 🪢 Esityksen linkki
+
+Esitys pidetään livenä oppitunnilla 29.4.2025.
